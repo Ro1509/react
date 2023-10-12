@@ -504,7 +504,8 @@ const ResturantCard=({
 
 const Body=()=>{
     return (
-        <div className="body-rest">{
+        <div className="body-rest"> 
+        {
            returantList.map((restaurant, index) => {
               console.log(restaurant);
                     return <ResturantCard {...restaurant} key={restaurant.id} />;
