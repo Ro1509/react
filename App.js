@@ -41,24 +41,38 @@ const head = (
 //    <h1>React Element</h1>
 //);
 
-const Comp= ()=>{
-    return (
-        <h1>Functional Component</h1>
-    )
-}
-const Head = () =>{
-    return (
-        <div>
-            <Comp />
+//const Comp= ()=>{
+//    return (
+//        <h1>Functional Component</h1>
+//    )
+//}
+const Logo=()=>(
+    <a href="/">
+        <img
+        alt="logo png"
+        className="logo"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhxSF3YnbGO83lkANWkY8nkwLKv7DFiLi88A&usqp=CAU"
+        />
+    </a>
+);
 
+const HeaderComponents= ()=>{
+    return (
+        <div className="top-component" style={top}>
+            <Logo/>   
+            <div className="list-item">
+                <ol className="item">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Contact</li>
+                </ol>
+            </div>
         </div>
-       
-        //<h1>I am learning a new framework called React</h1>
-    );
+        
+        );
 };
-
 
 
 const root=ReactDOM.createRoot(document.getElementById('root'));
 
-root.render(<Head />);
+root.render(<HeaderComponents />);
